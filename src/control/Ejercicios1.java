@@ -61,7 +61,7 @@ public class Ejercicios1 {
 		for(int i=0;i<grupoPersonas.length;i++)
 			grupoPersonas[i].getNif();
 		
-	}
+		}
 
 	public void listarPrimos(int cuantos) {
 		// int contador = 0;
