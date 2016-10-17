@@ -60,7 +60,19 @@ public class Ejercicios1 {
 
 	}
 
-	public boolean esPrimo(int numero) {
+	public boolean esPrimo(int b){
+		
+		int a = 2;
+		
+		while(b%a!=0){
+			System.out.println("Es primo");
+			return true;
+		}
+		System.out.println("No es primo");
+		return false;
+	}
+	
+	/*public boolean esPrimo(int numero) {
 		for (int i = 2; i < numero; i++) {
 			if (numero % i == 0) {
 				// System.out.println(numero + " NO es primo !!" + i);
@@ -72,7 +84,7 @@ public class Ejercicios1 {
 		// System.out.println(numero + " es primo !!");
 		return true;
 
-	}
+	}*/
 
 	public void fibonacci(int n) {
 		float a, b, c;
@@ -104,7 +116,7 @@ public class Ejercicios1 {
 	public void mostrarLanzadas(int[] datos, int cuantasLanzadas) {
 		for (int i = 0; i < datos.length; i++)
 			/*
-			 * System.out.println("El número " + (i + 1) + " ha salido " +
+			 * System.out.println("El nÃºmero " + (i + 1) + " ha salido " +
 			 * datos[i] + " veces(" + ((datos[i]*100)/cuantasLanzadas) + " %)");
 			 */
 			System.out.printf("El numero %d aparece %d veces (%.2f)\n", (i + 1), datos[i],
