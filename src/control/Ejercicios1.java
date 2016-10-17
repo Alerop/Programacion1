@@ -1,5 +1,7 @@
 package control;
 
+import java.util.Date;
+
 import modelo.Persona;
 
 public class Ejercicios1 {
@@ -45,21 +47,27 @@ public class Ejercicios1 {
 
 	public void creaListaPersonas() {
 		// crea 3 personas
-		Persona p1 = new Persona();
+		Persona p1 = new Persona("35698599K", "Maria", 'M', new Date());
 		Persona p2 = new Persona();
-		Persona p3 = new Persona();	
+		p2.setNif("58965871J");
+		p2.setNombre("Juani");
+		p2.setSexo('D');
+		p2.setFecha(new Date());
+		Persona p3 = new Persona("35636599M", "Pepe", 'H', new Date());	
 		
 		// define el array para 20 personas
 		Persona[] grupoPersonas = new Persona[20];
 		
 		// asigna las personas al array
-		p1 = grupoPersonas[0];
-		p2 = grupoPersonas[1];
-		p3 = grupoPersonas[2];
+		
+		grupoPersonas[0] = p1;
+		grupoPersonas[5] = p2;
+		grupoPersonas[12] = p3;
 		
 		// muestra el nif de las 3 personas
 		for(int i=0;i<grupoPersonas.length;i++)
-			grupoPersonas[i].getNif();
+			if(grupoPersonas[i] != null)
+				System.out.println(grupoPersonas[i].getNif());				
 		
 		}
 

@@ -8,7 +8,7 @@ public class Persona {
 	private String nombre;
 	private char sexo; 
 	private Date fecha;
-	
+
 	public Persona(String nif, String nombre, char sexo, Date fecha) {
 	    super();
 		this.nif = nif;
@@ -24,6 +24,22 @@ public class Persona {
 		this.sexo = 'M';
 		this.fecha = new Date();
 		// TODO Auto-generated constructor stub
+	}
+	
+	public void setNif(String nif) {
+		this.nif = nif;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void setSexo(char sexo) {
+		this.sexo = sexo;
+	}
+
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
 	}
 
 	public String getNif() {
