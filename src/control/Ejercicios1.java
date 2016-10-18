@@ -2,6 +2,7 @@ package control;
 
 import java.util.Date;
 
+import modelo.Estudiante;
 import modelo.Persona;
 
 public class Ejercicios1 {
@@ -12,8 +13,10 @@ public class Ejercicios1 {
 		/*
 		 * for (int i=0; i < 100 ; i++) ej1.lanzarDado();
 		 */
+		
 		// int x = 1000;//
 		// ej1.listaNPrimerosEnteros(x);
+		
 		// ej1.bucleReloj();
 		// int x = 134;
 		// int y = 138;
@@ -24,14 +27,20 @@ public class Ejercicios1 {
 		// resultado);
 		// int z = 50;
 		// ej1.fibonacci(z);
+		
 		/*
 		 * int cuantasLanzadas = 500; int[] salida =
 		 * ej1.lanzadas(cuantasLanzadas); ej1.mostrarLanzadas(salida,
 		 * cuantasLanzadas);
 		 */
-		// int numero = 7771;
+		
 		// ej1.listarPrimos(100);
 		//ej1.crearHebras(3);
+		
+		//CREAR UN OBJETO DE LA CLASE Estudiante
+		//Estudiante est1 = new Estudiante("32569845G", "Jose", 'M', new Date(), 3, "1993-05-26");
+		
+		
 		ej1.creaListaPersonas();
 	}
 
@@ -65,10 +74,15 @@ public class Ejercicios1 {
 		grupoPersonas[12] = p3;
 		
 		// muestra el nif de las 3 personas
-		for(int i=0;i<grupoPersonas.length;i++)
-			if(grupoPersonas[i] != null)
-				System.out.println(grupoPersonas[i].getNif());				
-		
+		for(int i=0;i<grupoPersonas.length;i++){
+			try {
+					//if(grupoPersonas[i] != null)
+					System.out.println(grupoPersonas[i].getNif());
+				} catch (NullPointerException ex) {
+					// TODO Auto-generated catch block
+					System.out.println("Objeto nulo");;
+				}				
+		}
 		}
 
 	public void listarPrimos(int cuantos) {
